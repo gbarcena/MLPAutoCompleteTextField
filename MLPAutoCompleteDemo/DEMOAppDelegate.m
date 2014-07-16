@@ -17,7 +17,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[DEMOViewController alloc] initWithNibName:@"View" bundle:[NSBundle mainBundle]];
-    self.window.rootViewController = self.viewController;
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    navVC.navigationBarHidden = YES;
+    self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
     //[self customizeAppearance];
     [self.window.layer setCornerRadius:4];
@@ -64,7 +66,7 @@
     CGContextSaveGState(composedImageContext);
     UIColor *shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.2];
     CGContextSetShadowWithColor(composedImageContext, CGSizeMake(1, -1), 2, [shadowColor CGColor]);
-   
+    
     CGContextFillPath(composedImageContext);
     CGContextRestoreGState(composedImageContext);
     
@@ -158,7 +160,7 @@
     CGContextSaveGState(composedImageContext);
     UIColor *shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.2];
     CGContextSetShadowWithColor(composedImageContext, CGSizeMake(0, -1), 2, [shadowColor CGColor]);
- 
+    
     CGContextFillPath(composedImageContext);
     CGContextRestoreGState(composedImageContext);
     
