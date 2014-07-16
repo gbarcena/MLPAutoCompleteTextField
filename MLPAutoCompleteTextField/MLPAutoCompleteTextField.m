@@ -444,8 +444,7 @@ withAutoCompleteString:(NSString *)string
         }
         
         [self.superview bringSubviewToFront:self];
-        UIView *rootView = [self.window.subviews objectAtIndex:0];
-        [rootView insertSubview:self.autoCompleteTableView
+        [self.superview insertSubview:self.autoCompleteTableView
                          belowSubview:self];
         [self.autoCompleteTableView setUserInteractionEnabled:YES];
         if(self.showTextFieldDropShadowWhenAutoCompleteTableIsOpen){
@@ -764,18 +763,23 @@ withAutoCompleteString:(NSString *)string
 - (CGRect)autoCompleteTableViewFrameForTextField:(MLPAutoCompleteTextField *)textField
                                  forNumberOfRows:(NSInteger)numberOfRows
 {
-    CGRect newTableViewFrame             = [self autoCompleteTableViewFrameForTextField:textField];
-    
-    UIView *rootView                     = [textField.window.subviews objectAtIndex:0];
-    CGRect textFieldFrameInContainerView = [rootView convertRect:textField.bounds
-                                                        fromView:textField];
-    
+// TODO: Reimplement this code for people using table views. Right now it breaks
+//       more normal use cases because of UILayoutContainerView
+//    CGRect newTableViewFrame             = [self autoCompleteTableViewFrameForTextField:textField];
+//    
+//    UIView *rootView                     = [textField.window.subviews objectAtIndex:0];
+//    CGRect textFieldFrameInContainerView = [rootView convertRect:textField.bounds
+//                                                        fromView:textField];
+//    
     CGFloat textfieldTopInset = textField.autoCompleteTableView.contentInset.top;
-    CGFloat converted_originY = textFieldFrameInContainerView.origin.y + textfieldTopInset;
+//    CGFloat converted_originY = textFieldFrameInContainerView.origin.y + textfieldTopInset;
+    CGRect newTableViewFrame = [self autoCompleteTableViewFrameForTextField:textField];
+
     CGFloat height = [self autoCompleteTableHeightForTextField:textField withNumberOfRows:numberOfRows];
     
     newTableViewFrame.size.height = height;
-    newTableViewFrame.origin.y    = converted_originY;
+//    newTableViewFrame.origin.y    = converted_originY;
+
     
     if(!textField.autoCompleteTableAppearsAsKeyboardAccessory){
         newTableViewFrame.size.height += textfieldTopInset;

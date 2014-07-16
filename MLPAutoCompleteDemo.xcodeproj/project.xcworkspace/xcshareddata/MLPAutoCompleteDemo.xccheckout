@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A3847C46-35E5-4FE9-8566-1E1096A7B3AD</string>
+	<string>A4EC6D62-84A7-4006-AF56-CECF094AEC9E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MLPAutoCompleteDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>CBC51ACE-BCFB-4746-9660-5CC11D2D9423</key>
-		<string>https://github.com/EddyBorja/MLPAutoCompleteTextField.git</string>
+		<key>EB78038C-1798-4025-ADFD-DE73EF08D597</key>
+		<string>https://github.com/thechipp/MLPAutoCompleteTextField.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MLPAutoCompleteDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>CBC51ACE-BCFB-4746-9660-5CC11D2D9423</key>
+		<key>EB78038C-1798-4025-ADFD-DE73EF08D597</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/EddyBorja/MLPAutoCompleteTextField.git</string>
+	<string>https://github.com/thechipp/MLPAutoCompleteTextField.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>CBC51ACE-BCFB-4746-9660-5CC11D2D9423</string>
+	<string>EB78038C-1798-4025-ADFD-DE73EF08D597</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CBC51ACE-BCFB-4746-9660-5CC11D2D9423</string>
+			<string>EB78038C-1798-4025-ADFD-DE73EF08D597</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MLPAutoCompleteTextField</string>
 		</dict>
