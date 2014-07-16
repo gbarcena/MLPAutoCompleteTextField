@@ -511,7 +511,6 @@
 		8559144A16C1C2B8007F88DE /* DEMOCustomAutoCompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8559144916C1C2B7007F88DE /* DEMOCustomAutoCompleteCell.m */; };
 		8559144C16C1CE36007F88DE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8559144B16C1CE35007F88DE /* QuartzCore.framework */; };
 		856E78581721E18B00932197 /* DEMOCustomAutoCompleteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 856E78571721E18B00932197 /* DEMOCustomAutoCompleteObject.m */; };
-		85AC584516B2004400CD60D5 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85AC584416B2004400CD60D5 /* View.xib */; };
 		85AC584C16B2089700CD60D5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85AC584B16B2089700CD60D5 /* Default@2x.png */; };
 		85AC584E16B2089C00CD60D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85AC584D16B2089C00CD60D5 /* Default-568h@2x.png */; };
 		85E716E31753060800A992A0 /* libGoogleAnalytics_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E716E11753060800A992A0 /* libGoogleAnalytics_debug.a */; };
@@ -532,6 +531,8 @@
 		85FF058D16B0874E009A94EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FF056816B0874D009A94EE /* Foundation.framework */; };
 		85FF059516B0874E009A94EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85FF059316B0874E009A94EE /* InfoPlist.strings */; };
 		85FF059816B0874E009A94EE /* MLPAutoCompleteDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FF059716B0874E009A94EE /* MLPAutoCompleteDemoTests.m */; };
+		EC36513C19762AA100A6C894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC36513B19762AA100A6C894 /* Main.storyboard */; };
+		EC36513F19762C4C00A6C894 /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC36513E19762C4C00A6C894 /* DemoTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1053,7 +1054,6 @@
 		856E78551721A2A200932197 /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPAutoCompletionObject.h; path = MLPAutoCompleteTextField/MLPAutoCompletionObject.h; sourceTree = SOURCE_ROOT; };
 		856E78561721E18B00932197 /* DEMOCustomAutoCompleteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOCustomAutoCompleteObject.h; sourceTree = "<group>"; };
 		856E78571721E18B00932197 /* DEMOCustomAutoCompleteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOCustomAutoCompleteObject.m; sourceTree = "<group>"; };
-		85AC584416B2004400CD60D5 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		85AC584B16B2089700CD60D5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		85AC584D16B2089C00CD60D5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		85E716DC1753060800A992A0 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = GoogleAnalytics/GAI.h; sourceTree = "<group>"; };
@@ -1090,6 +1090,9 @@
 		85FF059616B0874E009A94EE /* MLPAutoCompleteDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteDemoTests.h; sourceTree = "<group>"; };
 		85FF059716B0874E009A94EE /* MLPAutoCompleteDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteDemoTests.m; sourceTree = "<group>"; };
 		BC31C639174877BE0044B2A5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		EC36513B19762AA100A6C894 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EC36513D19762C4C00A6C894 /* DemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
+		EC36513E19762C4C00A6C894 /* DemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1689,8 +1692,11 @@
 				85FF05A116B0887F009A94EE /* MLPAutoCompleteTextField */,
 				85FF057516B0874D009A94EE /* DEMOAppDelegate.h */,
 				85FF057616B0874D009A94EE /* DEMOAppDelegate.m */,
+				EC36513B19762AA100A6C894 /* Main.storyboard */,
 				85FF057E16B0874D009A94EE /* DEMOViewController.h */,
 				85FF057F16B0874D009A94EE /* DEMOViewController.m */,
+				EC36513D19762C4C00A6C894 /* DemoTableViewController.h */,
+				EC36513E19762C4C00A6C894 /* DemoTableViewController.m */,
 				64AAFDD419361B30004EB079 /* DEMODataSource.h */,
 				64AAFDD519361B30004EB079 /* DEMODataSource.m */,
 				856E78561721E18B00932197 /* DEMOCustomAutoCompleteObject.h */,
@@ -1714,7 +1720,6 @@
 				85AC584B16B2089700CD60D5 /* Default@2x.png */,
 				85FF057216B0874D009A94EE /* main.m */,
 				85FF057416B0874D009A94EE /* MLPAutoCompleteDemo-Prefix.pch */,
-				85AC584416B2004400CD60D5 /* View.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1826,7 +1831,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				85FF057116B0874D009A94EE /* InfoPlist.strings in Resources */,
-				85AC584516B2004400CD60D5 /* View.xib in Resources */,
 				85AC584C16B2089700CD60D5 /* Default@2x.png in Resources */,
 				85AC584E16B2089C00CD60D5 /* Default-568h@2x.png in Resources */,
 				8559115416C19381007F88DE /* Nepal@2x.png in Resources */,
@@ -1961,6 +1965,7 @@
 				855911D516C19382007F88DE /* Macedonia@2x.png in Resources */,
 				855911D616C19382007F88DE /* Madagascar@2x.png in Resources */,
 				855911D716C19382007F88DE /* Malawi@2x.png in Resources */,
+				EC36513C19762AA100A6C894 /* Main.storyboard in Resources */,
 				855911D816C19382007F88DE /* Isle-of-Man@2x.png in Resources */,
 				855911D916C19382007F88DE /* Israel@2x.png in Resources */,
 				855911DA16C19382007F88DE /* Italy@2x.png in Resources */,
@@ -2363,6 +2368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC36513F19762C4C00A6C894 /* DemoTableViewController.m in Sources */,
 				85FF057316B0874D009A94EE /* main.m in Sources */,
 				85FF057716B0874D009A94EE /* DEMOAppDelegate.m in Sources */,
 				85FF058016B0874D009A94EE /* DEMOViewController.m in Sources */,

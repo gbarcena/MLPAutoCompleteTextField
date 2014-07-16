@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="7EU-35-8Pn">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Demo Table View Controller - Root View Controller-->
+        <scene sceneID="vGa-sU-Ilg">
+            <objects>
+                <tableViewController id="4lK-KY-i8O" customClass="DemoTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Yjf-BM-cRd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellIdentifier" id="RWJ-5g-rOD">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RWJ-5g-rOD" id="tY0-C1-KvL">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" minimumFontSize="17" clearButtonMode="whileEditing" id="kEt-lJ-0Ta" customClass="MLPAutoCompleteTextField">
+                                            <rect key="frame" x="52" y="11" width="248" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                            <connections>
+                                                <outlet property="autoCompleteDataSource" destination="qf2-Nf-BAV" id="EgY-TV-nva"/>
+                                                <outlet property="autoCompleteDelegate" destination="4lK-KY-i8O" id="x5w-EQ-8Mj"/>
+                                                <outlet property="delegate" destination="4lK-KY-i8O" id="VWp-mx-AP2"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Npw-gc-vle">
+                                            <rect key="frame" x="11" y="7" width="35" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Back">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="4lK-KY-i8O" eventType="touchUpInside" id="D85-dx-1oC"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4lK-KY-i8O" id="mxa-ha-JD0"/>
+                            <outlet property="delegate" destination="4lK-KY-i8O" id="vkB-O4-4u4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="0En-cc-hId"/>
+                </tableViewController>
+                <customObject id="qf2-Nf-BAV" userLabel="Autocomplete Datasource" customClass="DEMODataSource"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Czv-ED-jXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="-834"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LbC-hr-IRR">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="7EU-35-8Pn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KAh-i0-OAj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yja-Co-Cll" kind="relationship" relationship="rootViewController" id="qtl-RB-jec"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLT-fh-neJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-117" y="-392"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yOy-1u-1me">
+            <objects>
+                <viewController id="yja-Co-Cll" customClass="DEMOViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nw2-Y8-id1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" minimumFontSize="17" clearButtonMode="whileEditing" id="tAt-Ju-bzM" customClass="MLPAutoCompleteTextField">
+                                <rect key="frame" x="38" y="148" width="245" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="autoCompleteDataSource" destination="GoO-xr-myj" id="isF-lr-zLP"/>
+                                    <outlet property="autoCompleteDelegate" destination="yja-Co-Cll" id="yTZ-Gu-7TY"/>
+                                    <outlet property="delegate" destination="yja-Co-Cll" id="qO4-4T-KJV"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What country are you from?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JXT-56-aiC">
+                                <rect key="frame" x="10" y="114" width="300" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MLPAutoCompleteTextField Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7iA-tc-VFD" userLabel="Demo Title">
+                                <rect key="frame" x="20" y="487" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.0039215688589999999" green="0.36078432199999999" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Written by Eddy Borja at Mainloop" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yMK-Ye-BFp" userLabel="Author Credit">
+                                <rect key="frame" x="38" y="509" width="245" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13.300000190734863"/>
+                                <color key="textColor" red="0.0039215688589999999" green="0.36078432199999999" blue="0.58039218189999997" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="rIV-vp-u39">
+                                <rect key="frame" x="38" y="421" width="245" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <segments>
+                                    <segment title="Drop Down"/>
+                                    <segment title="Keyboard"/>
+                                </segments>
+                                <color key="tintColor" red="0.0039215688589999999" green="0.36470589040000001" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="skQ-2w-aS3">
+                                <rect key="frame" x="163" y="20" width="137" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Table View Example">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4lK-KY-i8O" kind="push" id="FGE-Uj-7gL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.52156865600000002" blue="0.75294125079999996" alpha="1" colorSpace="deviceRGB"/>
+                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                        <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="G1R-lh-q0j"/>
+                    <connections>
+                        <outlet property="author" destination="yMK-Ye-BFp" id="2aa-1U-eq6"/>
+                        <outlet property="autocompleteDataSource" destination="GoO-xr-myj" id="w4k-xL-QWG"/>
+                        <outlet property="autocompleteTextField" destination="tAt-Ju-bzM" id="iCc-B5-scr"/>
+                        <outlet property="demoTitle" destination="7iA-tc-VFD" id="3h4-Uf-P8R"/>
+                        <outlet property="typeSwitch" destination="rIV-vp-u39" id="kAH-TD-g4L"/>
+                    </connections>
+                </viewController>
+                <customObject id="GoO-xr-myj" userLabel="Autocomplete Datasource" customClass="DEMODataSource"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEn-mh-yea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="-41"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

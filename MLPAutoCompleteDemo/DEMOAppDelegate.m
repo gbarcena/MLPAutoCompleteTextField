@@ -14,25 +14,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[DEMOViewController alloc] initWithNibName:@"View" bundle:[NSBundle mainBundle]];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-    navVC.navigationBarHidden = YES;
-    self.window.rootViewController = navVC;
-    [self.window makeKeyAndVisible];
-    //[self customizeAppearance];
     [self.window.layer setCornerRadius:4];
     [self.window.layer setMasksToBounds:YES];
-    [self.window setBackgroundColor:self.viewController.view.backgroundColor];
     return YES;
 }
 
-
-
 - (void)customizeAppearance
 {
-    
     [[UISegmentedControl appearance] setBackgroundImage:self.blueBarBackground forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
     [[UISegmentedControl appearance] setBackgroundImage:self.darkBlueBarBackground forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
