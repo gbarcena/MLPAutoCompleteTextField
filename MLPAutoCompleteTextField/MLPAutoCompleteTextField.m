@@ -487,6 +487,7 @@ withAutoCompleteString:(NSString *)string
     [self setApplyBoldEffectToAutoCompleteSuggestions:YES];
     [self setShowTextFieldDropShadowWhenAutoCompleteTableIsOpen:YES];
     [self setShouldResignFirstResponderFromKeyboardAfterSelectionOfAutoCompleteRows:YES];
+    [self setAutoCompleteTableWidthInset:1.0f];
     [self setAutoCompleteRowHeight:40];
     [self setAutoCompleteFontSize:13];
     [self setMaximumNumberOfAutoCompleteRows:3];
@@ -830,7 +831,7 @@ withAutoCompleteString:(NSString *)string
     
     frame.origin.x += textField.autoCompleteTableOriginOffset.width;
     frame.origin.y += textField.autoCompleteTableOriginOffset.height;
-    frame = CGRectInset(frame, 1, 0);
+    frame = CGRectInset(frame, self.autoCompleteTableWidthInset, 0);
     
     return frame;
 }
@@ -1104,7 +1105,7 @@ withAutoCompleteString:(NSString *)string
         if(!suggestedStringDeservesPriority){
             [otherSuggestions addObject:autoCompleteObject];
         }
-
+        
     }
     
     NSMutableArray *results = [NSMutableArray array];

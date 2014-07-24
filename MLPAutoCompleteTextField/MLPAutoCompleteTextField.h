@@ -58,6 +58,7 @@
 @property (assign) CGFloat autoCompleteRowHeight;
 @property (nonatomic, assign) CGRect autoCompleteTableFrame;
 @property (assign) CGSize autoCompleteTableOriginOffset;
+@property (assign) CGFloat autoCompleteTableWidthInset;
 @property (assign) CGFloat autoCompleteTableCornerRadius; //only applies for drop down style autocomplete tables.
 @property (nonatomic, assign) UIEdgeInsets autoCompleteContentInsets;
 @property (nonatomic, assign) UIEdgeInsets autoCompleteScrollIndicatorInsets;
