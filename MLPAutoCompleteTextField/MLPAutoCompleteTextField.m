@@ -881,7 +881,7 @@ withAutoCompleteString:(NSString *)string
 
 - (void) cancel
 {
-    dispatch_semaphore_signal(sentinelSemaphore);
+    if (sentinelSemaphore) dispatch_semaphore_signal(sentinelSemaphore);
     [super cancel];
 }
 
